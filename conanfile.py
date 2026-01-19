@@ -7,7 +7,7 @@ import os
 
 class LibsodiumConan(ConanFile):
     name = "libsodium"
-    version = "1.0.18"
+    version = "1.0.20"
     url = "https://github.com/bincrafters/conan-libsodium"
     homepage = "https://github.com/jedisct1/libsodium"
     description = "Sodium is a modern, easy-to-use software library for encryption, decryption, signatures, " \
@@ -33,7 +33,7 @@ class LibsodiumConan(ConanFile):
             del self.options.fPIC
 
     def source(self):
-        sha256 = "6f504490b342a4f8a4c4a02fc9b866cbef8622d5df4e5452b46be121e46636c1"
+        sha256 = "ebb65ef6ca439333c2bb41a0c1990587288da07f6c7fd07cb3a18cc18d30ce19"
         source_url = "https://download.libsodium.org/libsodium/releases/libsodium-%s.tar.gz" % self.version
         tools.get(source_url, sha256=sha256)
         extracted_dir = self.name + "-" + self.version
